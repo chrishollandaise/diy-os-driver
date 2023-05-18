@@ -27,7 +27,7 @@ static int __init accel_init(void) {
 		printk(KERN_INFO "FAIL: could not get i2c adapter\n");
 		goto exit;
 	}
-	i2c_client = i2c_new_device(i2c_dev, board_info);
+	i2c_client = i2c_new_client_device(i2c_dev, board_info);
 	if(!i2c_client) {
 		printk(KERN_INFO "FAIL: could not get i2c client\n");
 		goto exit;
